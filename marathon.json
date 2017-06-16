@@ -15,7 +15,7 @@
       }]
     }
   },
-  "cmd":"gosu grafana /usr/sbin/grafana-server --homepath=/usr/share/grafana --config=/etc/grafana/grafana.ini",
+  "cmd":"mkdir -p /usr/share/grafana/data/log && chmod -R 777 /usr/share/grafana/data && gosu grafana /usr/sbin/grafana-server --homepath=/usr/share/grafana --config=/etc/grafana/grafana.ini",
   "healthChecks": [{
       "protocol": "HTTP",
       "path": "/",
